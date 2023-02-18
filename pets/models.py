@@ -2,17 +2,12 @@ from django.db import models
 
 
 class Sex(models.TextChoices):
-    Male = 'Male'
-    Female = "Female"
+    male = 'Male'
+    female = "Female"
     Default = "Not Informed"
 
 
 class Pet(models.Model):
-    # sexo = (
-    #     ("Male", "Male"),
-    #     ("Female", "Female"),
-    #     ("Not Informed", "Default")
-    # )
     name = models.CharField(max_length=50)
     age = models.IntegerField()
     weight = models.FloatField()
